@@ -9,6 +9,7 @@ import java.util.List;
 
 public interface StatisticsService {
     StatDto create(StatInDto statInDto);
+
     List<StatOutDto> get(LocalDateTime start,
                          LocalDateTime end,
                          List<String> uris,

@@ -17,6 +17,7 @@ public class ErrorHandler {
         log.debug("Получен статус 500 Server Error {}", exception.getMessage(), exception);
         return Map.of("error", exception.getMessage());
     }
+
     @ExceptionHandler
     @ResponseStatus(HttpStatus.NOT_FOUND)  // 404
     public ErrorResponse handleNotFound(final NotFoundException e) {
