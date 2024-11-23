@@ -1,4 +1,4 @@
-package ru.practicum;
+package practicum;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -6,7 +6,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.service.StatisticsService;
+import practicum.service.StatisticsService;
+import ru.practicum.StatInDto;
+import ru.practicum.StatOutDto;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ru.practicum.service;
+package practicum.service;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -6,8 +6,11 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import practicum.StatRepository;
+import practicum.Statistics;
+import practicum.StatisticsMapper;
 import ru.practicum.*;
-import ru.practicum.exception.ValidationException;
+import practicum.exception.ValidationException;
 
 import java.time.LocalDateTime;
 import java.util.List;

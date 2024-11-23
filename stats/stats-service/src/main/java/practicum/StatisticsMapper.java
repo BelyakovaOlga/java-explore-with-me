@@ -1,4 +1,7 @@
-package ru.practicum;
+package practicum;
+
+import ru.practicum.StatDto;
+import ru.practicum.StatInDto;
 
 public class StatisticsMapper {
     public static StatDto toStatDto(Statistics statistics) {
