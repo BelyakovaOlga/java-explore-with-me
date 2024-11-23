@@ -1,4 +1,4 @@
-package ru.practicum.services;
+package ru.practicum.service;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
