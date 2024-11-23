@@ -38,7 +38,7 @@ services:
       - SPRING_DATASOURCE_DRIVER-CLASS-NAME=org.postgresql.Driver
 
   ewm-service:
-    build: ewm-service
+    build: main-service
     container_name: ewm-service-container
     ports:
       - "8080:8080"
