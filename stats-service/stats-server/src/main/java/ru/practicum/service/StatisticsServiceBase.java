@@ -32,7 +32,7 @@ public class StatisticsServiceBase implements StatisticsService {
     public List<StatOutDto> get(LocalDateTime start, LocalDateTime end, List<String> uris, Boolean unique) {
 
         if (start.isAfter(end)) {
-            throw new ValidationException("Дата начала и дата окончания не могут быть равны или противоречить друг другу");
+            throw new ValidationException("Дата начала start: " + start + "и дата окончания end: " + end + "не могут быть равны или противоречить друг другу");
         }
         if (unique) {
             if (uris != null) {
