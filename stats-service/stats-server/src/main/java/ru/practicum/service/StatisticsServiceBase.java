@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.practicum.*;
 import ru.practicum.exception.ValidationException;
 
+import java.security.InvalidParameterException;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -32,8 +33,9 @@ public class StatisticsServiceBase implements StatisticsService {
     public List<StatOutDto> get(LocalDateTime start, LocalDateTime end, List<String> uris, Boolean unique) {
 
         if (start.isAfter(end)) {
-            throw new ValidationException("Дата начала start: " + start + "и дата окончания end: " + end + "не могут быть равны или противоречить друг другу");
+            throw new InvalidParameterException("Дата начала start: " + start + "и дата окончания end: " + end + "не могут быть равны или противоречить друг другу");
         }
+
         if (unique) {
             if (uris != null) {
                 return statRepository.findAllWithUniqueIpWithUris(uris, start, end);
