@@ -40,7 +40,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@SpringBootApplication(scanBasePackages = {"ru.practicum.client."})
+@SpringBootApplication(scanBasePackages = {"ru.practicum.client"})  // для Idea
 @Service
 @RequiredArgsConstructor
 @Slf4j
