@@ -139,7 +139,7 @@ public class EventServiceBase implements EventService {
 
         eventRepository.save(eventForUpdate);
 
-        return eventForUpdate != null ? EventMapper.toEventFullDto(eventForUpdate) : null;
+        return EventMapper.toEventFullDto(eventForUpdate);
     }
 
     @Override
