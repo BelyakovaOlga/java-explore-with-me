@@ -43,6 +43,7 @@ public class EventMapper {
                 .title(event.getTitle())
                 .build();
     }
+
     public static Event toEvent(NewEventDto newEventDto) {
         return Event.builder()
                 .id(null)

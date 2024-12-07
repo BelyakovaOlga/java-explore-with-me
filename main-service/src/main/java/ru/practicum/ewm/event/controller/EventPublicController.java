@@ -25,7 +25,7 @@ import java.util.Objects;
 @RequestMapping(path = "/events")
 public class EventPublicController {
     private final EventService eventService;
-    private final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private final DateTimeFormatter Formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     @GetMapping
     public List<EventShortDto> getAllEvents(
@@ -40,8 +40,8 @@ public class EventPublicController {
             @RequestParam(defaultValue = "10") @Positive final int size,
             final HttpServletRequest request) {
 
-        LocalDateTime start = (rangeStart != null) ? LocalDateTime.parse(rangeStart, FORMATTER) : LocalDateTime.now();
-        LocalDateTime end = (rangeEnd != null) ? LocalDateTime.parse(rangeEnd, FORMATTER) : LocalDateTime.now().plusYears(20);
+        LocalDateTime start = (rangeStart != null) ? LocalDateTime.parse(rangeStart, Formatter) : LocalDateTime.now();
+        LocalDateTime end = (rangeEnd != null) ? LocalDateTime.parse(rangeEnd, Formatter) : LocalDateTime.now().plusYears(20);
 
         EventParams eventParams = new EventParams();
         eventParams.setText(text);

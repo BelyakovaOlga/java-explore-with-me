@@ -24,7 +24,7 @@ import java.util.List;
 @RequestMapping(path = "/admin/events")
 public class EventAdminController {
     private final EventService eventService;
-    private final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private final DateTimeFormatter Formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     @GetMapping
     public List<EventFullDto> getAll(
@@ -36,8 +36,8 @@ public class EventAdminController {
             @RequestParam(defaultValue = "0") @PositiveOrZero final int from,
             @RequestParam(defaultValue = "10") @Positive final int size) {
         log.info("==> ЗАПОРС на получение всех событий (ADMIN)");
-        LocalDateTime start = (rangeStart != null) ? LocalDateTime.parse(rangeStart, FORMATTER) : LocalDateTime.now();
-        LocalDateTime end = (rangeEnd != null) ? LocalDateTime.parse(rangeEnd, FORMATTER) : LocalDateTime.now().plusYears(20);
+        LocalDateTime start = (rangeStart != null) ? LocalDateTime.parse(rangeStart, Formatter) : LocalDateTime.now();
+        LocalDateTime end = (rangeEnd != null) ? LocalDateTime.parse(rangeEnd, Formatter) : LocalDateTime.now().plusYears(20);
         EventAdminParams eventAdminParams =  new EventAdminParams();
         eventAdminParams.setUsers(users);
         eventAdminParams.setStates(states);
