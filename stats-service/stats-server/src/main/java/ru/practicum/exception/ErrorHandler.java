@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.security.InvalidParameterException;
-import java.util.Map;
 
 @Slf4j
 @RestControllerAdvice
