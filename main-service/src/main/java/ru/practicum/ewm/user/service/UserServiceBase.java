@@ -35,8 +35,7 @@ public class UserServiceBase implements UserService  {
     }
 
     @Override
-    public List<UserOutDto> get(List<Long>  listId, Integer from, Integer size)
-    {
+    public List<UserOutDto> get(List<Long>  listId, Integer from, Integer size) {
         List<UserOutDto>  listUserOutDto;
 
         PageRequest page = PageRequest.of(from / size, size);

@@ -1,4 +1,4 @@
-package ru.practicum.ewm.сompilation.contoller;
+package ru.practicum.ewm.compilation.contoller;
 
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
@@ -7,8 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.ewm.сompilation.dto.CompilationDto;
-import ru.practicum.ewm.сompilation.service.CompilationService;
+import ru.practicum.ewm.compilation.dto.CompilationDto;
+import ru.practicum.ewm.compilation.service.CompilationService;
 
 import java.util.List;
 

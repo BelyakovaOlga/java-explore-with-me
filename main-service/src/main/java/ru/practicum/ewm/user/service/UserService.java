@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface UserService {
     List<UserOutDto> get(List<Long> ids, Integer from, Integer size);
+
     UserOutDto create(UserInDto inDto);
 
     void delete(Long userId);

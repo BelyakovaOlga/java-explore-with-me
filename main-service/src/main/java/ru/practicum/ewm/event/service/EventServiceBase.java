@@ -40,7 +40,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@SpringBootApplication(scanBasePackages={"ru.practicum.client."})
+@SpringBootApplication(scanBasePackages = {"ru.practicum.client."})
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -251,8 +251,8 @@ public class EventServiceBase implements EventService {
         checkUser(userId);
         checkEvenByInitiatorAndEventId(userId, eventId);
         List<Request> requests = requestRepository.findAllByEventId(eventId);
-        return requests.stream().map(RequestMapper::toParticipationRequestDto).
-                                collect(Collectors.toList());
+        return requests.stream().map(RequestMapper::toParticipationRequestDto)
+                                .collect(Collectors.toList());
 
     }
 
@@ -328,6 +328,7 @@ public class EventServiceBase implements EventService {
 
         return result;
     }
+
     private List<Request> checkRequestOrEventList(Long eventId, List<Long> requestId) {
         return requestRepository.findByEventIdAndIdIn(eventId, requestId).orElseThrow(
                 () -> new NotFoundException("Запроса с id = " + requestId + " или события с id = "
@@ -455,6 +456,7 @@ public class EventServiceBase implements EventService {
 
         return event;
     }
+
     @Override
     public Map<String, List<ParticipationRequestDto>> approveRequests(final Long userId, final Long eventId,
                                                                       final EventRequestStatusUpdateRequest requestUpdateDto) {

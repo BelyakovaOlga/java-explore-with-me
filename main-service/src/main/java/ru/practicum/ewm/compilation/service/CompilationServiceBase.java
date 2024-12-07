@@ -1,4 +1,4 @@
-package ru.practicum.ewm.сompilation.service;
+package ru.practicum.ewm.compilation.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -7,13 +7,13 @@ import ru.practicum.ewm.event.EventRepository;
 import ru.practicum.ewm.event.model.Event;
 import ru.practicum.ewm.exception.NotFoundException;
 import ru.practicum.ewm.exception.ValidatetionConflict;
-import ru.practicum.ewm.сompilation.Compilation;
-import ru.practicum.ewm.сompilation.CompilationMapper;
-import ru.practicum.ewm.сompilation.CompilationRepository;
+import ru.practicum.ewm.compilation.Compilation;
+import ru.practicum.ewm.compilation.CompilationMapper;
+import ru.practicum.ewm.compilation.CompilationRepository;
 import org.springframework.transaction.annotation.Transactional;
-import ru.practicum.ewm.сompilation.dto.CompilationDto;
-import ru.practicum.ewm.сompilation.dto.NewCompilationDto;
-import ru.practicum.ewm.сompilation.dto.UpdateCompilationDto;
+import ru.practicum.ewm.compilation.dto.CompilationDto;
+import ru.practicum.ewm.compilation.dto.NewCompilationDto;
+import ru.practicum.ewm.compilation.dto.UpdateCompilationDto;
 
 import java.util.*;
 import java.util.stream.Collectors;

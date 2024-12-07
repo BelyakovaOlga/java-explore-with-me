@@ -1,18 +1,19 @@
-package ru.practicum.ewm.сompilation.dto;
+package ru.practicum.ewm.compilation.dto;
 
 import jakarta.validation.constraints.Size;
 import lombok.*;
+import ru.practicum.ewm.event.dto.EventShortDto;
 
 import java.util.Set;
 
+@Builder
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class UpdateCompilationDto {
+public class CompilationDto {
     private Long id;
-    private Set<Long> events;
+    private Set<EventShortDto> events;
     private Boolean pinned;
     @Size(max = 50)
     private String title;

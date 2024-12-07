@@ -1,8 +1,8 @@
-package ru.practicum.ewm.сompilation;
+package ru.practicum.ewm.compilation;
 
 import ru.practicum.ewm.event.mapper.EventMapper;
-import ru.practicum.ewm.сompilation.dto.CompilationDto;
-import ru.practicum.ewm.сompilation.dto.NewCompilationDto;
+import ru.practicum.ewm.compilation.dto.CompilationDto;
+import ru.practicum.ewm.compilation.dto.NewCompilationDto;
 
 import java.util.stream.Collectors;
 

@@ -1,4 +1,4 @@
-package ru.practicum.ewm.сompilation;
+package ru.practicum.ewm.compilation;
 
 import jakarta.persistence.*;
 import lombok.*;

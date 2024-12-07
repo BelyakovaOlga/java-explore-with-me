@@ -27,6 +27,7 @@ public interface EventService {
      List<EventShortDto> getAllPublic(EventParams eventParams, HttpServletRequest request);
 
     EventFullDto getById(Long eventId, HttpServletRequest request);
+
     Map<String, List<ParticipationRequestDto>> approveRequests(final Long userId, final Long eventId,
                                                                final EventRequestStatusUpdateRequest requestUpdateDto);
 

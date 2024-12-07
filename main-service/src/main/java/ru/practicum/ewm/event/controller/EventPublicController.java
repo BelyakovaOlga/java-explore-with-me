@@ -25,7 +25,7 @@ import java.util.Objects;
 @RequestMapping(path = "/events")
 public class EventPublicController {
     private final EventService eventService;
-    private final static DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     @GetMapping
     public List<EventShortDto> getAllEvents(
