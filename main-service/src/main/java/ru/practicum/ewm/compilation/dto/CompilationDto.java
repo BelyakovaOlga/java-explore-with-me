@@ -2,6 +2,7 @@ package ru.practicum.ewm.compilation.dto;
 
 import jakarta.validation.constraints.Size;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 import ru.practicum.ewm.event.dto.EventShortDto;
 
 import java.util.Set;
@@ -11,10 +12,11 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class CompilationDto {
-    private Long id;
-    private Set<EventShortDto> events;
-    private Boolean pinned;
+    Long id;
+    Set<EventShortDto> events;
+    Boolean pinned;
     @Size(max = 50)
-    private String title;
+    String title;
 }

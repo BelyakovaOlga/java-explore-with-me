@@ -1,6 +1,7 @@
 package ru.practicum.ewm.event.dto;
 
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -10,14 +11,15 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class EventParams {
-    private String text;
-    private List<Long> categories;
-    private Boolean paid;
-    private LocalDateTime rangeStart;
-    private LocalDateTime rangeEnd;
-    private Boolean onlyAvailable = false;
-    private String sort;
-    private Integer from = 0;
-    private Integer size = 10;
+    String text;
+    List<Long> categories;
+    Boolean paid;
+    LocalDateTime rangeStart;
+    LocalDateTime rangeEnd;
+    Boolean onlyAvailable = false;
+    String sort;
+    Integer from = 0;
+    Integer size = 10;
 }

@@ -1,6 +1,7 @@
 package ru.practicum.ewm.event.dto;
 
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -10,12 +11,13 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class EventAdminParams {
-    private List<Long> users;
-    private List<String> states;
-    private List<Long> categories;
-    private LocalDateTime rangeStart;
-    private LocalDateTime rangeEnd;
-    private Integer from = 0;
-    private Integer size = 10;
+    List<Long> users;
+    List<String> states;
+    List<Long> categories;
+    LocalDateTime rangeStart;
+    LocalDateTime rangeEnd;
+    Integer from = 0;
+    Integer size = 10;
 }

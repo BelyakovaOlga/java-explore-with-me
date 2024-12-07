@@ -10,6 +10,7 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 @Data
 @Entity
@@ -17,16 +18,17 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @Table(name = "locations")
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
     @Column(nullable = false)
-    private Float lat;
+    Float lat;
 
     @Column(nullable = false)
-    private Float lon;
+    Float lon;
 
     @Getter
     @Setter

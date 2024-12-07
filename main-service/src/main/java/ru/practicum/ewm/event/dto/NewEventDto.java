@@ -7,6 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 import org.hibernate.validator.constraints.Length;
 import ru.practicum.ewm.location.Location;
 
@@ -17,33 +18,34 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class NewEventDto {
     @NotBlank
     @Length(max = 2000, min = 20)
-    private String annotation;
+    String annotation;
 
     @NotNull
     @Positive
-    private Long category;
+    Long category;
 
     @NotBlank
     @Length(max = 7000, min = 20)
-    private String description;
+    String description;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime eventDate;
+    LocalDateTime eventDate;
 
     @NotNull
     @Valid
-    private Location.LocationDto location;
+    Location.LocationDto location;
 
     private boolean paid;
 
     @PositiveOrZero
-    private int participantLimit;
-    private boolean requestModeration = true;
+    int participantLimit;
+    boolean requestModeration = true;
 
     @NotNull
     @Length(min = 3, max = 120)
-    private String title;
+    String title;
 }
