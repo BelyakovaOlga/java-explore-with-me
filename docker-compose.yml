@@ -32,7 +32,6 @@ services:
       - ewm-db
       - stats-server   #// 01.12.2023
     environment:
-      - CLIENT_URL=http://stats-server:9090
       - SPRING_DATASOURCE_URL=jdbc:postgresql://ewm-db:5432/ewm
       - SPRING_DATASOURCE_USERNAME=ewm
       - SPRING_DATASOURCE_PASSWORD=ewm
