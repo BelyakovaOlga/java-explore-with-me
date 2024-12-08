@@ -2,6 +2,7 @@ package ru.practicum.ewm.comment;
 
 import jakarta.persistence.Entity;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import jakarta.persistence.*;
@@ -16,28 +17,29 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @Entity(name = "comments")
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Comment {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
     @Column(name = "text", nullable = false)
-    private String text;
+    String text;
 
     @ManyToOne
     @JoinColumn(name = "event_id")
-    private Event event;
+    Event event;
 
     @ManyToOne
     @JoinColumn(name = "author_id")
-    private User author;
+    User author;
 
     @Column(name = "created")
     @CreationTimestamp
-    private LocalDateTime created;
+    LocalDateTime created;
 
     @UpdateTimestamp
     @Column(name = "last_updated_on")
-    private LocalDateTime lastUpdatedOn;
+    LocalDateTime lastUpdatedOn;
 }

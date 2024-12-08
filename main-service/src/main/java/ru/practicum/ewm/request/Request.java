@@ -2,6 +2,7 @@ package ru.practicum.ewm.request;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 import ru.practicum.ewm.event.model.Event;
 import ru.practicum.ewm.user.User;
 
@@ -13,23 +14,24 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Entity(name = "requests")
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Request {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
     @Column(name = "create_date", nullable = false)
-    private LocalDateTime created;
+    LocalDateTime created;
 
     @ManyToOne
     @JoinColumn(name = "event_id")
-    private Event event;
+    Event event;
 
     @ManyToOne
     @JoinColumn(name = "requester_id")
-    private User requester;
+    User requester;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
-    private RequestStatus status;
+    RequestStatus status;
 }

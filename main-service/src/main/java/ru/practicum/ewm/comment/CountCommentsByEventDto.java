@@ -1,15 +1,14 @@
 package ru.practicum.ewm.comment;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class CountCommentsByEventDto {
-    private Long eventId;
-    private Long countComments;
+    Long eventId;
+    Long countComments;
 }

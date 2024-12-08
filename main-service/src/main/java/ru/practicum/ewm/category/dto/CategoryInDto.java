@@ -13,5 +13,5 @@ import jakarta.validation.constraints.NotBlank;
 public class CategoryInDto {
     @NotBlank
     @Size(max = 50, message = "Максимальная длина - 50 символов")
-    private String name;
+    String name;
 }
