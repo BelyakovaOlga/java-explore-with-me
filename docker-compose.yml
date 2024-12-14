@@ -16,8 +16,8 @@ services:
     image: postgres:16.1
     container_name: stats-db
     ports:
-       - "6541:5432"
-      # - "5432:5432" //Idea
+        - "6541:5432"
+      # - "5432:5432" # //Idea
     environment:
       - POSTGRES_DB=stats
       - POSTGRES_USER=stats
@@ -41,7 +41,7 @@ services:
     image: postgres:16.1
     container_name: ewn-db
     ports:
-      - "6540:5432"
+       - "6540:5432"
     environment:
       - POSTGRES_DB=ewm
       - POSTGRES_USER=ewm
