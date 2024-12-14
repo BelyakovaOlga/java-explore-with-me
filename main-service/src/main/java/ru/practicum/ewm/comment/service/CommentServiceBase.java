@@ -94,8 +94,8 @@ public class CommentServiceBase implements CommentService {
         return commentList.stream().map(CommentMapper::toCommentDto).collect(Collectors.toList());
     }
 
-    @Transactional
     @Override
+    @Transactional
     public CommentOutDto create(Long userId, Long eventId, CommentInDto commentDto) {
         Event event = checkEvent(eventId);
         User user = checkUser(userId);

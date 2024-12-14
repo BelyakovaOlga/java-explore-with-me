@@ -12,8 +12,8 @@ import ru.practicum.ewm.comment.service.CommentService;
 import java.util.List;
 
 @Slf4j
-@RestController
 @Validated
+@RestController
 @RequiredArgsConstructor
 @RequestMapping(path = "/comments")
 public class CommentPublicController {

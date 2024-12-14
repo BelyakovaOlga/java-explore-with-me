@@ -13,10 +13,11 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping(path = "/comments")
 @RequiredArgsConstructor
+@RequestMapping(path = "/comments")
 public class CommentPrivateController {
     private final CommentService commentService;
+    public static final String ENDPOINT_PATH = "/users/{userId}/{commentId}";
 
     @PostMapping("/users/{userId}/events/{eventId}")
     @ResponseStatus(HttpStatus.CREATED)
@@ -27,7 +28,7 @@ public class CommentPrivateController {
         return commentService.create(userId, eventId, commentInDto);
     }
 
-    @PatchMapping("/users/{userId}/{commentId}")
+    @PatchMapping(ENDPOINT_PATH)
     public CommentOutDto update(@PathVariable Long userId, @PathVariable Long commentId,
                                 @Valid @RequestBody CommentInDto updateCommentDto) {
 
@@ -41,14 +42,14 @@ public class CommentPrivateController {
         return commentService.getByUser(userId);
     }
 
-    @DeleteMapping("/users/{userId}/{commentId}")
+    @DeleteMapping(ENDPOINT_PATH)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Long userId, @PathVariable Long commentId) {
         log.info("==> Удаление коментария id = {} пользователем id = {} ", userId, commentId);
         commentService.delete(userId, commentId);
     }
 
-    @GetMapping("/users/{userId}/{commentId}")
+    @GetMapping(ENDPOINT_PATH)
     public CommentOutDto get(@PathVariable Long userId, @PathVariable Long commentId) {
         log.info("==> Получения коментария id = {} пользователем id = {} ", commentId, userId);
         return commentService.getByUserAndCommentId(userId, commentId);
