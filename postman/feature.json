@@ -1058,22 +1058,22 @@
 	"variable": [
 		{
 			"key": "eventid",
-			"value": "",
+			"value": "1",
 			"type": "default"
 		},
 		{
 			"key": "baseUrl",
-			"value": "",
+			"value": "http://localhost:8080",
 			"type": "default"
 		},
 		{
 			"key": "uid",
-			"value": "",
+			"value": "1",
 			"type": "default"
 		},
 		{
 			"key": "eid",
-			"value": "",
+			"value": "1",
 			"type": "default"
 		},
 		{
@@ -1082,7 +1082,7 @@
 		},
 		{
 			"key": "comid",
-			"value": "",
+			"value": "1",
 			"type": "default"
 		}
 	]
