@@ -22,7 +22,7 @@ public class  CategoryAdminController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public CategoryOutDto createCategory(@RequestBody @Valid CategoryInDto categoryInDto) {
-        log.info("==> Cоздание новой категории: {}", categoryInDto);
+        log.info("==> Cоздание новой категории: {}", categoryInDto.toString());
         return categoryService.create(categoryInDto);
     }
 
