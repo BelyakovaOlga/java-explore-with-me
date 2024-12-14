@@ -1,7 +1,5 @@
 package ru.practicum.ewm.comment.service;
 
-
-import ru.practicum.ewm.comment.Comment;
 import ru.practicum.ewm.comment.dto.CommentInDto;
 import ru.practicum.ewm.comment.dto.CommentOutDto;
 

@@ -3,7 +3,6 @@ package ru.practicum.ewm.comment.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import ru.practicum.ewm.event.model.Event;
 
 import java.time.LocalDateTime;
 

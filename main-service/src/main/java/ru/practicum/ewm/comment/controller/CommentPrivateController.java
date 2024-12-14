@@ -22,9 +22,9 @@ public class CommentPrivateController {
     @ResponseStatus(HttpStatus.CREATED)
     public CommentOutDto create(@PathVariable Long userId,
                                 @PathVariable Long eventId,
-                                @Valid @RequestBody CommentInDto сommentInDto) {
-        log.info("==> Добавление коментария: {} к событию = {} от пользовталея = {} ", сommentInDto.toString(), eventId, userId);
-        return commentService.create(userId, eventId, сommentInDto);
+                                @Valid @RequestBody CommentInDto commentInDto) {
+        log.info("==> Добавление коментария: {} к событию = {} от пользовталея = {} ", commentInDto.toString(), eventId, userId);
+        return commentService.create(userId, eventId, commentInDto);
     }
 
     @PatchMapping("/users/{userId}/{commentId}")
