@@ -1,4 +1,6 @@
-package ru.practicum.ewm.comment;
+package ru.practicum.ewm.comment.dto;
+
+
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

@@ -19,7 +19,7 @@ import ru.practicum.client.StatisticsClient;
 import ru.practicum.ewm.category.Category;
 import ru.practicum.ewm.category.CategoryRepository;
 import ru.practicum.ewm.comment.CommentRepository;
-import ru.practicum.ewm.comment.CountCommentsByEventDto;
+import ru.practicum.ewm.comment.dto.CountCommentsByEventDto;
 import ru.practicum.ewm.event.EventRepository;
 import ru.practicum.ewm.event.dto.*;
 import ru.practicum.ewm.event.mapper.EventMapper;
